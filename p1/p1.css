@@ -1,0 +1,58 @@
+body{
+    background-image: url(back.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: aliceblue;
+    font-family: Carlito, Arial, Helvetica, sans-serif;
+    font-size: medium;
+
+}
+
+h2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.centered{
+    margin: auto;
+    width: 30%;
+    padding: 30px;
+    font-size: 20px;
+    font-size: 2.5vw;
+    background-color: rgb(212, 159, 107);
+    opacity: 0.85;
+    border-radius: 10px;
+
+    
+}
+.button{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    
+}
+
+.button:hover{
+    border-style: solid ;
+    border: 2px;
+    border-color: black;
+
+}
+
+#btnReset{
+    background-color: lightcoral;    
+}
+#btnSubmit{
+    background-color: lightgreen;    
+    
+}
+
+.footer {
+    background-color: lightslategray;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+  }
+.footer::first-letter{
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

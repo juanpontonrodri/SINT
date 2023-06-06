@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>p1.html</title>
+        <link rel="stylesheet" type="text/css" href="p1.css">
+        <script src="p1.js"></script>
+    </head>
+
+<body>
+
+<div class="centered">
+<h2>Sing Up</h2>
+<br>
+<form action="http://alberto.gil.webs.uvigo.es/SINT/22-23/p1.php"  name="reg_form" id="reg_form" onsubmit="return validacion()">
+    <div>
+    Full name<br>
+    <input type="text"  placeholder="María López" name="cname"  pattern="[A-Za-záéíóúÁÉÍÓÚÑñ]{3,}[ ]{1}[A-za-záéíóúÁÉÍÓÚÑñ]{3,}" title="Two words of at least 3 letters (ASCI letters and accented vowels or ñÑ)"><br>
+    Login name<br>
+    <input type="text" placeholder="Ex: marlop3" id="clogin" name="clogin"><br>
+    Password<br>
+    <input type="password" placeholder="Ex: ec2+R93-2" id="cpasswd" name="cpasswd"><br>
+    DNI<br>
+    <input type="text" placeholder="Ex: 12345678A" id="cdni" name="cdni"><br>
+    Email address<br>
+    <input type="email" placeholder="marialopez@gmail.com" name="cemail"><br>
+    Picture<br>
+    <input type="file" name="cfile"><br>
+
+    </div>
+
+    <div>
+    <p>Mark your age group</p>
+    <input type="radio" id="cage1" name="cage" value="Less than 25">Less than 25<br>
+    <input type="radio" id="cage2" name="cage" value="Between 25 and 40" >Between 25 and 40<br>
+    <input type="radio" id="cage3" name="cage" value="Between 40 and 60">Between 40 and 60<br>
+    <input type="radio" id="cage4" name="cage" value="More than 60">More than 60<br>
+
+    </div>
+    <div>
+    
+    <p>Select your preferred music genres</p>
+
+    <input type="checkbox" id="cgenre1" name="cgenre[]" value="Pop" onclick="check_only()">Pop<br>
+    <input type="checkbox" id="cgenre2" name="cgenre[]" value="Rock" onclick="check_only()">Rock<br>
+    <input type="checkbox" id="cgenre3" name="cgenre[]" value="Country" onclick="check_only()">Country<br>
+    <input type="checkbox" id="cgenre4" name="cgenre[]" value="Rap" onclick="check_only()">Rap<br>
+    <input type="checkbox" id="cgenre5" name="cgenre[]" value="Soul" onclick="check_only()">Soul<br>
+    <input type="checkbox" class="call" id="cgenreall" name="checkall" value="Check all" onclick="check_boxes()">Check all<br>
+    <input type="checkbox" class="call" id="cgenreunall" name="uncheckall" value="Uncheck all" onclick="uncheck_boxes()">Uncheck all<br>
+
+    </div>
+
+    <div>
+        <p>Comments </p>
+        <textarea name="ccomment"  cols="30" rows="5"></textarea>
+        <br>
+
+        Select internet provider:
+        <select  name="cInternet">
+            <option value="R">R</option>
+            <option value="Movistar">Movistar</option>
+            <option value="Vodafone">Vodafone</option>
+            <option value="Orange">Orange</option>
+        </select>
+
+    </div>
+
+    <div>
+        <p>Select the submission method</p>
+        <input type="radio" id="cmethodGET"  name="cmethod" value ="GET" onclick="get()" >GET<br>
+        <input type="radio" id="cmethodPOST"  name="cmethod" value="POST" onclick="post()" >POST<br>
+        <p>Select the submission encoding</p>
+        <input type="radio" id="cencondingAPPL"  name="cencoding" value="application/x-www-form-urlencoded" onclick="enc_appl()" >APPL<br>
+        <input type="radio" id="cencondingMULT"  name="cencoding" value="multipart/form-data" onclick="enc_mult()" >MULT<br>
+        
+
+    </div>
+
+    <div>
+        <input type="hidden" id="cbrowser" name="cbrowser" >
+        <input type="hidden" id="cdate" name="cdate" >
+    </div>
+        
+    <div>
+        <input class="button"  type="reset" id="btnReset" value="Reset"> <input class="button" type="submit" id="btnSubmit" value="Submit">
+
+    </div>
+
+    
+
+</form>
+</div>
+<h4 class =footer>
+    Juan Pontón Rodríguez    
+</h4>
+</body>
+</html>
